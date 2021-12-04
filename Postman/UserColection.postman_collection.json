@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "f80e33de-7d42-4199-8301-ad2aa8e877db",
+		"name": "UserColection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UpdateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NTg2NzQ3LCJpYXQiOjE2Mzg1ODYxNDcsImp0aSI6ImEwMTQ0NmZhN2E2NTRiY2Y4MDI2YWZhNzE2YTViNjVmIiwidXNlcl9pZCI6MX0.85HrFUiPA1Y_mi1zvpV-PUl3qNgV4VeKFb0VYNExlNw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"documentType\": \"CC\",\r\n\"document\": 1112332412,\r\n\"name\": \"Juan Abdaras\",\r\n\"address\": \"Calle 11 322 22\",\r\n\"phone\": 3214124,\r\n\"email\": \"juan@gmail.com\",\r\n\"username\":\"JADAD3\",\r\n\"password\":\"Clave2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/update/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"update",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"JADA10\",\r\n\"password\":\"Clave2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"documentType\": \"CC\",\r\n\"document\": 1112332412,\r\n\"name\": \"Juan Abdara\",\r\n\"address\": \"Calle 11 322 22\",\r\n\"phone\": 3214124,\r\n\"email\": \"Juan@gmail.com\",\r\n\"username\":\"JADA10\",\r\n\"password\":\"Clave2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NTg2NzQ3LCJpYXQiOjE2Mzg1ODYxNDcsImp0aSI6ImEwMTQ0NmZhN2E2NTRiY2Y4MDI2YWZhNzE2YTViNjVmIiwidXNlcl9pZCI6MX0.85HrFUiPA1Y_mi1zvpV-PUl3qNgV4VeKFb0VYNExlNw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/userList/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"userList",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4NTg3MDgxLCJpYXQiOjE2Mzg1ODY0ODEsImp0aSI6ImJhMDBiOWY1YWZmNjRlYzdhNzRkNTliMTFhZTg2N2ZmIiwidXNlcl9pZCI6Mn0.bJz8mcOp8rToHBh9y7B_8av61cy8mtGr0ymTKKow0fM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/delete/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"delete",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
